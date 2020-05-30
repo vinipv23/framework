@@ -29,18 +29,21 @@ driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
 		System.out.println("Total links are "+links.size());
 		
+		//for loop
 		for(int i=0;i<links.size();i++)
 		{
 			
 			WebElement ele= links.get(i);
 			
 			String url=ele.getAttribute("href");
+			System.out.println(url);
 			
 			verifyLinkActive(url);
 			
 		}
 		
 	}
+	////Function to get broken links
 	
 	public static void verifyLinkActive(String linkUrl)
 	{
